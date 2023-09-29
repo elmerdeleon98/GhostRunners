@@ -7,16 +7,19 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
 //Garcia, Mario
-//9/23/23
-//Moves the player/camer and applies gravity. 
+//9/29/23
+//Moves the player/camer and applies gravity. Lets the player run using [left shift]
 public class PlayerController : MonoBehaviour
 {   
     private Vector3 movementInput;
     private Vector3 velocity;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform cam;
-    [SerializeField] private float speed;
+    public float speed = 6f;
+    public float walkingSpeed = 6f;
+    public float sprintSpeed = 10f;
     [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private bool isSprinting;
 
     void Start()
     {
@@ -44,6 +47,21 @@ public class PlayerController : MonoBehaviour
         {   
             //pulls the player down using gravity 
             velocity.y -= gravity * -2f * Time.deltaTime;
+        }
+
+        //initializing temporary variable that holds the velocity
+        float sprintSpeed = 10f;
+        isSprinting = Input.GetKey(KeyCode.LeftShift);
+        
+        //checks to see if the player is sprinting and changes the speed of the player. 
+        switch (isSprinting)
+        {
+            case true:
+            speed = sprintSpeed;
+            break;
+            default:
+            speed = walkingSpeed;
+            break;
         }
 
         //Checks to see if the player is moving
