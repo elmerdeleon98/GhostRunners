@@ -1159,6 +1159,7 @@ GameObject:
   - component: {fileID: 1155638630}
   - component: {fileID: 1155638636}
   - component: {fileID: 1155638637}
+  - component: {fileID: 1155638639}
   - component: {fileID: 1155638638}
   m_Layer: 0
   m_Name: Player
@@ -1182,7 +1183,10 @@ MonoBehaviour:
   controller: {fileID: 1155638636}
   cam: {fileID: 330585546}
   speed: 6
+  walkingSpeed: 6
+  sprintSpeed: 10
   gravity: -9.81
+  isSprinting: 0
 --- !u!23 &1155638633
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1310,6 +1314,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1155638639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155638629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb4edc36c2d04f618d9a1cd21324d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myObject: {fileID: 1155638633}
 --- !u!1 &1571876961
 GameObject:
   m_ObjectHideFlags: 3
