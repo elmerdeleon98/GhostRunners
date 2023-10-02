@@ -19,15 +19,24 @@ public class Player : MonoBehaviour
 
     }
 
-    //recognises a player picked up health pack and heals player by 5
     private void OnTriggerEnter(Collider other)
     {
+        //recognises a player picked up health pack and heals player by 5
         if (other.CompareTag("HealthPack"))
         {
             Debug.Log("Player picked up a health pack.");
             playerHealth += 5;
             other.gameObject.SetActive(false);
         }
+
+        //recognises a player picked up the magical orb and switches to winScene
+        if (other.CompareTag("MagicOrb"))
+        {
+            Debug.Log("Player picked up the Magic Orb!");
+            SceneSwitch.instance.switchScene(4);
+        }
     }
+
+ 
 
 }

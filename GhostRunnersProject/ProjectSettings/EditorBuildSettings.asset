@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ElmerScene.unity
+    guid: 5ac6e1a5443b10743a01efc830f37fab
+  - enabled: 1
+    path: Assets/Scenes/CarlScene.unity
+    guid: 866b4785eb40de5428682fbe0cd7dd0f
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 7186b2a3523bd9b429ce526a8abda2ea
+  - enabled: 1
+    path: Assets/Scenes/MarioScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 96c68c652415347aea84cb1d24fe80d1
   m_configObjects: {}
