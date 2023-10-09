@@ -11,8 +11,10 @@ using UnityEngine.Rendering;
 //Moves the player/camer and applies gravity. Lets the player run using [left shift]
 public class PlayerController : MonoBehaviour
 {   
+    //Movement and Camera Variables
     private Vector3 movementInput;
     private Vector3 velocity;
+    [SerializeField] private GameObject flashlight;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform cam;
     public float speed = 6f;
@@ -20,6 +22,11 @@ public class PlayerController : MonoBehaviour
     public float sprintSpeed = 10f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private bool isSprinting;
+
+    //Flashlight Variables
+    public int uses;
+    public bool isOn;
+    public int maxUses;
 
     void Start()
     {
@@ -30,7 +37,24 @@ public class PlayerController : MonoBehaviour
     void Update()
     {   
         Move();
+        Attack();
+
     }
+
+    private void Attack()
+    {
+        isOn = Input.GetKey(KeyCode.Mouse0);
+        
+        if(isOn)
+        {
+            flashlight.SetActive(true);
+        }
+        else
+        {
+            flashlight.SetActive(false);
+        }
+    }
+
 
     private void Move()
     {

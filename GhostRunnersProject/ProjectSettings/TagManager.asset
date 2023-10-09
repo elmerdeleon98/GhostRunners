@@ -7,6 +7,7 @@ TagManager:
   - HealthPack
   - Enemy
   - MagicOrb
+  - Flashlight
   layers:
   - Default
   - TransparentFX
