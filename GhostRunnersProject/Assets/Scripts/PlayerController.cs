@@ -28,10 +28,18 @@ public class PlayerController : MonoBehaviour
     public bool isOn;
     public int maxUses;
 
+    //Respawning
+    private Vector3 startPosition;
+    public int lives = 3;
+    public int fallDepth;
+
     void Start()
     {
         //Hiding the cursor on start (press escape to get back cursor)
         Cursor.lockState = CursorLockMode.Locked;
+
+        //stores the start position of the Player when the scene starts
+        startPosition = transform.position;
     }
 
     void Update()
@@ -105,5 +113,18 @@ public class PlayerController : MonoBehaviour
             controller.Move(direction * speed * Time.deltaTime);
             controller.Move(velocity * Time.deltaTime);
         }
+
+        //checks to see if the player falls off the platform
+        if (transform.position.y<fallDepth)
+        {
+            Respawn();
+        }
+    }
+
+    //Respawns the player at the start of the level
+    private void Respawn()
+    {
+        transform.position = startPosition;
+        lives--;
     }
 }

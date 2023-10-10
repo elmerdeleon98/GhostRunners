@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public int playerHealth = 0;
 
+    public GhostJump skill;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,18 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Player picked up the Magic Orb!");
             SceneSwitch.instance.switchScene(4);
+        }
+
+        //recognises a player was hit by an enemy
+        if (other.CompareTag("Enemy"))
+        {
+            if (skill.isTranslucent==true)
+            {
+                Debug.Log("Player evaded enemy!");
+            }
+            else
+            Debug.Log("Player was hit by an enemy!");
+            playerHealth -= 3;
         }
     }
 

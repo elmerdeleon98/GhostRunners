@@ -5,8 +5,8 @@ using UnityEngine;
 public class GhostJump : MonoBehaviour
 {
     [SerializeField] private Renderer myObject;
-    private bool isTranslucent = false;
-    private bool isBlocked = false;
+    public bool isTranslucent = false;
+    public bool isBlocked = false;
 
     // Update is called once per frame
     void Update()
@@ -33,6 +33,7 @@ public class GhostJump : MonoBehaviour
         {
             StartCoroutine(CoolDown());
         }
+
     }
     //will wait 5 secs before turning off translucent state, change the color back, start cool down
     public IEnumerator GhostTimer()
