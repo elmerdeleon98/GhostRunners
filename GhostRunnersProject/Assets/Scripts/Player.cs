@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int playerHealth = 0;
+    public int batteryJuice = 0;
 
     public GhostJump skill;
 
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
     {
         // Initialize playerHealth to 10
         playerHealth = 10;
+        //Initialize BatteryJuice to 5
+        batteryJuice = 5;
     }
 
     // Update is called once per frame
@@ -48,6 +51,18 @@ public class Player : MonoBehaviour
             else
             Debug.Log("Player was hit by an enemy!");
             playerHealth -= 3;
+        }
+
+        //recognises a player picked up a battery
+        if(other.CompareTag("Battery"))
+        {
+            Debug.Log("Picked up battery");
+            if(batteryJuice < 5)
+            {
+                batteryJuice++;
+            }
+            Debug.Log("You have " + batteryJuice + " uses");
+            other.gameObject.SetActive(false);
         }
     }
 
