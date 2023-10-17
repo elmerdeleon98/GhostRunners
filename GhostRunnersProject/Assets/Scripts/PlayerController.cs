@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 6f;
     public float walkingSpeed = 6f;
     public float sprintSpeed = 10f;
-    [SerializeField] private float gravity = -9.81f;
+    public float gravity = -9.81f;
     [SerializeField] private bool isSprinting;
 
     //Flashlight Variables
@@ -33,8 +34,12 @@ public class PlayerController : MonoBehaviour
     public int lives = 3;
     public int fallDepth;
 
+    //Flying Variables
+    public int timer = 5;
+
     void Start()
     {
+        gravity = -9.81f;
         //Hiding the cursor on start (press escape to get back cursor)
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -46,7 +51,30 @@ public class PlayerController : MonoBehaviour
     {   
         Move();
         Attack();
+        Fly();
+    }
 
+    IEnumerator Timer(int timer)
+    {
+        //moves the player slightly off the ground to start the floating
+        controller.transform.position = new Vector3(controller.transform.position.x, controller.transform.position.y + .05f, controller.transform.position.z);
+        yield return new WaitForSeconds(timer);
+        gravity = -9.81f;
+    }
+
+    public void Fly()
+    {
+        //if the player presses spacebar they will begin to fly
+        isOn = Input.GetKey(KeyCode.Space);
+        float tempGravity = 0;
+
+        if (isOn && controller.isGrounded)
+        {
+            tempGravity = gravity;
+            gravity = 1.5f;
+            StartCoroutine(Timer(timer));
+            Debug.Log("pressed space");
+        }
     }
 
     private void Attack()
@@ -101,8 +129,6 @@ public class PlayerController : MonoBehaviour
         {
             //getting the direction of the player inputs 
             Vector3 moveVec = transform.TransformDirection(movementInput);
-
-            
 
             //move the player according to the cameras direction
             float targetAngle = Mathf.Atan2(movementInput.x, movementInput.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
