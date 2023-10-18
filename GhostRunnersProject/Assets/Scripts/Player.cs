@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("MagicOrb"))
         {
             Debug.Log("Player picked up the Magic Orb!");
-            SceneSwitch.instance.switchScene(4);
+            SceneSwitch.instance.switchScene(2);
         }
 
         //recognises a player was hit by an enemy
