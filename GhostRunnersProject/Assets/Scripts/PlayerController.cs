@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("pressed space");
         }
     }
-
+    //if the player left clicks the flashlight will turn on. 
     private void Attack()
     {
         isOn = Input.GetKey(KeyCode.Mouse0);

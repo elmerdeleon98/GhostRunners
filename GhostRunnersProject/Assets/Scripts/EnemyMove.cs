@@ -4,25 +4,77 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    //Horizontal Variables
     public GameObject leftPoint;
     public GameObject rightPoint;
     private Vector3 leftPos;
     private Vector3 rightPos;
-    public int speed;
     public bool goingLeft;
+
+    //left = up
+    //right = down
+
+    //Vertical Variables
+    public GameObject upPoint;
+    public GameObject downPoint;
+    private Vector3 upPos;
+    private Vector3 downPos;
+    public bool goingUp;
+
+    public int enemyType = 0;
+    public int speed;
 
     void Start()
     {
+        //initializing horizontal position variables. 
         leftPos = leftPoint.transform.position;
         rightPos = rightPoint.transform.position;
+
+        //initializing vertical position variables
+        upPos = upPoint.transform.position;
+        downPos = downPoint.transform.position;
     }
 
     void Update()
     {
-        Move();
+        if(enemyType == 0)
+        {
+            LRMove();
+        }
+        
+        if(enemyType == 1) 
+        {
+            UDMove();
+        }
     }
 
-    private void Move()
+    private void UDMove()
+    {
+        if (goingUp)
+        {
+            if(transform.position.y >= upPos.y)
+            {
+                goingUp = false;
+            }
+            else
+            {
+                transform.position += Vector3.up * Time.deltaTime * speed;
+            }
+        }
+        else
+        {
+            if (transform.position.y <= downPos.y)
+            {
+                goingUp = true; 
+            }
+            else
+            {
+                transform.position += Vector3.down * Time.deltaTime * speed;
+            }
+        }
+    }
+
+    private void LRMove()
     {
         if(goingLeft)
         {
