@@ -8,10 +8,12 @@ public class UiManager : MonoBehaviour
 {
     public Player player;
     public TMP_Text playerHealthText;
+    public TMP_Text playerBatteryText;
 
     // Update is called once per frame
     void Update()
     {
         playerHealthText.text = "Player Health:" + player.playerHealth;
+        playerBatteryText.text = "Charge Count:" + player.batteryJuice;
     }
 }

@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     public GhostJump skill;
 
+    public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (playerHealth <=0)
+        {
+            Debug.Log("YOU HAVE DIED, GAME OVER!");
+            GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

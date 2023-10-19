@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4468351, g: 0.4967143, b: 0.5749721, a: 1}
+  m_IndirectSpecularColor: {r: 0.44683492, g: 0.49671382, b: 0.57497185, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1372,7 +1372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539560478}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10263582, y: -0.000000004278879, z: 4.4149776e-10, w: 0.994719}
+  m_LocalRotation: {x: 0.10263582, y: 0.000000004278879, z: -4.4149776e-10, w: 0.994719}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3524,6 +3524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1155638637}
   playerHealthText: {fileID: 1601835402}
+  playerBatteryText: {fileID: 0}
 --- !u!114 &1912225908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3832,6 +3833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5fc7bb026c7347b6dc9e1bea9819f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 1155638637}
 --- !u!54 &2013226455
 Rigidbody:
   m_ObjectHideFlags: 0

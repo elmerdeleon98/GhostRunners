@@ -9,6 +9,7 @@ TagManager:
   - MagicOrb
   - Flashlight
   - Battery
+  - CheckPoint1
   layers:
   - Default
   - TransparentFX
