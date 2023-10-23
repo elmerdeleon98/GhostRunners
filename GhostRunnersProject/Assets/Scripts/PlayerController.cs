@@ -11,7 +11,7 @@ using UnityEngine.Rendering;
 //9/29/23
 //Moves the player/camer and applies gravity. Lets the player run using [left shift]
 public class PlayerController : MonoBehaviour
-{   
+{
     //Movement and Camera Variables
     private Vector3 movementInput;
     private Vector3 velocity;
@@ -35,11 +35,13 @@ public class PlayerController : MonoBehaviour
     public int fallDepth;
 
     //Flying Variables
-    public int timer = 5;
+    private bool isFloating;
+    private float floatDuration = 3.0f;
 
     void Start()
     {
         gravity = -9.81f;
+
         //Hiding the cursor on start (press escape to get back cursor)
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -48,40 +50,45 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {   
+    {
         Move();
         Attack();
         Fly();
     }
 
-    IEnumerator Timer(int timer)
-    {
-        //moves the player slightly off the ground to start the floating
-        controller.transform.position = new Vector3(controller.transform.position.x, controller.transform.position.y + .05f, controller.transform.position.z);
-        yield return new WaitForSeconds(timer);
-        gravity = -9.81f;
-    }
-
     public void Fly()
     {
         //if the player presses spacebar they will begin to fly
-        isOn = Input.GetKey(KeyCode.Space);
-        float tempGravity = 0;
-
-        if (isOn && controller.isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
         {
-            tempGravity = gravity;
-            gravity = 1.5f;
-            StartCoroutine(Timer(timer));
-            Debug.Log("pressed space");
+            StartCoroutine(FloatingCoroutine());
         }
+    }
+
+    private IEnumerator FloatingCoroutine()
+    {
+        //saving original gravity and changing it 
+        float originalGravity = gravity;
+        gravity = 2f;
+        float timer = 0f;
+
+        //allow the player to fly while the floatduration is greater than the timer. 
+        while (timer < floatDuration)
+        {
+            velocity.y = Mathf.Lerp(0f, 10f, timer / floatDuration);
+
+            timer += Time.deltaTime;
+
+            yield return null;
+        }
+        gravity = originalGravity;
     }
     //if the player left clicks the flashlight will turn on. 
     private void Attack()
     {
         isOn = Input.GetKey(KeyCode.Mouse0);
-        
-        if(isOn)
+
+        if (isOn)
         {
             flashlight.SetActive(true);
         }
@@ -98,13 +105,13 @@ public class PlayerController : MonoBehaviour
         movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
         //checking if the player is on the ground
-        if(controller.isGrounded)
-        {   
+        if (controller.isGrounded)
+        {
             //makes it so that when you fall off you don't instantly fall at max gravity. 
             velocity.y = -1f;
         }
         else
-        {   
+        {
             //pulls the player down using gravity 
             velocity.y -= gravity * -2f * Time.deltaTime;
         }
@@ -112,20 +119,20 @@ public class PlayerController : MonoBehaviour
         //initializing temporary variable that holds the velocity
         float sprintSpeed = 10f;
         isSprinting = Input.GetKey(KeyCode.LeftShift);
-        
+
         //checks to see if the player is sprinting and changes the speed of the player. 
         switch (isSprinting)
         {
             case true:
-            speed = sprintSpeed;
-            break;
+                speed = sprintSpeed;
+                break;
             default:
-            speed = walkingSpeed;
-            break;
+                speed = walkingSpeed;
+                break;
         }
 
         //Checks to see if the player is moving
-        if(movementInput.magnitude >= 0.1f)
+        if (movementInput.magnitude >= 0.1f)
         {
             //getting the direction of the player inputs 
             Vector3 moveVec = transform.TransformDirection(movementInput);
@@ -141,7 +148,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //checks to see if the player falls off the platform
-        if (transform.position.y<fallDepth)
+        if (transform.position.y < fallDepth)
         {
             Respawn();
         }
