@@ -10,6 +10,9 @@ TagManager:
   - Flashlight
   - Battery
   - CheckPoint1
+  - Exit1
+  - Exit2
+  - Exit3
   layers:
   - Default
   - TransparentFX

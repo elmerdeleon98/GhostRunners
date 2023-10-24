@@ -44,7 +44,28 @@ public class Player : MonoBehaviour
         if (other.CompareTag("MagicOrb"))
         {
             Debug.Log("Player picked up the Magic Orb!");
+            SceneSwitch.instance.switchScene(4);
+        }
+
+        //recognises a player touched the exit 1 and switches to next level
+        if (other.CompareTag("Exit1"))
+        {
+            Debug.Log("Player tocuhed exit");
+            SceneSwitch.instance.switchScene(1);
+        }
+
+        //recognises a player touched the exit 2 and switches to next level
+        if (other.CompareTag("Exit2"))
+        {
+            Debug.Log("Player tocuhed exit");
             SceneSwitch.instance.switchScene(2);
+        }
+
+        //recognises a player touched the exit 3 and switches to next level
+        if (other.CompareTag("Exit3"))
+        {
+            Debug.Log("Player tocuhed exit");
+            SceneSwitch.instance.switchScene(3);
         }
 
         //recognises a player was hit by an enemy
