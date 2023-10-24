@@ -141,11 +141,15 @@ public class PlayerController : MonoBehaviour
             float targetAngle = Mathf.Atan2(movementInput.x, movementInput.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-            //moving the player
+            //moving the player's direction
             Vector3 direction = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(direction * speed * Time.deltaTime);
-            controller.Move(velocity * Time.deltaTime);
+
         }
+        //(new change)
+        //moves the player 
+        controller.Move(velocity * Time.deltaTime);
+        //(new change)
 
         //checks to see if the player falls off the platform
         if (transform.position.y < fallDepth)
