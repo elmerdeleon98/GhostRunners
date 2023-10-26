@@ -4,31 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int playerHealth = 0;
-    public int batteryJuice = 0;
+    public static int playerHealth = 10;
+    public static int batteryJuice = 5;
 
     public GhostJump skill;
 
     public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Initialize playerHealth to 10
-        playerHealth = 10;
-        //Initialize BatteryJuice to 5
-        batteryJuice = 5;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (playerHealth <=0)
-        {
-            Debug.Log("YOU HAVE DIED, GAME OVER!");
-            GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
-        }
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -44,28 +25,28 @@ public class Player : MonoBehaviour
         if (other.CompareTag("MagicOrb"))
         {
             Debug.Log("Player picked up the Magic Orb!");
-            SceneSwitch.instance.switchScene(4);
+            SceneSwitch.instance.switchScene(6);
         }
 
         //recognises a player touched the exit 1 and switches to next level
         if (other.CompareTag("Exit1"))
         {
             Debug.Log("Player tocuhed exit");
-            SceneSwitch.instance.switchScene(1);
+            SceneSwitch.instance.switchScene(3);
         }
 
         //recognises a player touched the exit 2 and switches to next level
         if (other.CompareTag("Exit2"))
         {
             Debug.Log("Player tocuhed exit");
-            SceneSwitch.instance.switchScene(2);
+            SceneSwitch.instance.switchScene(4);
         }
 
         //recognises a player touched the exit 3 and switches to next level
         if (other.CompareTag("Exit3"))
         {
             Debug.Log("Player tocuhed exit");
-            SceneSwitch.instance.switchScene(3);
+            SceneSwitch.instance.switchScene(5);
         }
 
         //recognises a player was hit by an enemy
@@ -76,8 +57,10 @@ public class Player : MonoBehaviour
                 Debug.Log("Player evaded enemy!");
             }
             else
-            Debug.Log("Player was hit by an enemy!");
-            playerHealth -= 3;
+            {
+                Debug.Log("Player was hit by an enemy!");
+                playerHealth -= 3;
+            }
         }
 
         //recognises a player picked up a battery

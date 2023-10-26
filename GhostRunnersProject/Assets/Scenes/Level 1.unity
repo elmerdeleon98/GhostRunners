@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 13011582}
   - component: {fileID: 13011581}
   - component: {fileID: 13011580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -507,7 +507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5fc7bb026c7347b6dc9e1bea9819f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 1298042511}
 --- !u!65 &17034378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5136,7 +5135,7 @@ GameObject:
   - component: {fileID: 65877306}
   - component: {fileID: 65877305}
   - component: {fileID: 65877304}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5221,7 +5220,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5594,7 +5593,7 @@ GameObject:
   - component: {fileID: 179501481}
   - component: {fileID: 179501480}
   - component: {fileID: 179501479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ffff (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5679,7 +5678,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5905,111 +5904,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &226530086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 226530090}
-  - component: {fileID: 226530089}
-  - component: {fileID: 226530088}
-  - component: {fileID: 226530087}
-  m_Layer: 0
-  m_Name: Exit
-  m_TagString: Exit1
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!135 &226530087
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226530086}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &226530088
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226530086}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: e402a4e025423e94487f7e1a3120bd77, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &226530089
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226530086}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &226530090
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226530086}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.64, y: 3, z: 52.938396}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228838113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,7 +5917,7 @@ GameObject:
   - component: {fileID: 228838117}
   - component: {fileID: 228838116}
   - component: {fileID: 228838115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6108,7 +6002,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7251,7 +7145,7 @@ GameObject:
   - component: {fileID: 367733227}
   - component: {fileID: 367733226}
   - component: {fileID: 367733225}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7336,7 +7230,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7740,7 +7634,7 @@ GameObject:
   - component: {fileID: 487966604}
   - component: {fileID: 487966603}
   - component: {fileID: 487966602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ffff (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7825,7 +7719,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8143,7 +8037,7 @@ GameObject:
   - component: {fileID: 529727359}
   - component: {fileID: 529727358}
   - component: {fileID: 529727357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8228,7 +8122,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8759,7 +8653,7 @@ GameObject:
   - component: {fileID: 607742069}
   - component: {fileID: 607742068}
   - component: {fileID: 607742067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8844,7 +8738,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9083,7 +8977,7 @@ GameObject:
   - component: {fileID: 625349396}
   - component: {fileID: 625349395}
   - component: {fileID: 625349394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ffff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9168,7 +9062,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9407,7 +9301,7 @@ GameObject:
   - component: {fileID: 642552338}
   - component: {fileID: 642552337}
   - component: {fileID: 642552336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9492,7 +9386,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9731,7 +9625,7 @@ GameObject:
   - component: {fileID: 665587139}
   - component: {fileID: 665587138}
   - component: {fileID: 665587137}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9816,7 +9710,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10055,7 +9949,7 @@ GameObject:
   - component: {fileID: 760558581}
   - component: {fileID: 760558580}
   - component: {fileID: 760558579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ffff (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10140,7 +10034,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10576,7 +10470,7 @@ GameObject:
   - component: {fileID: 831589616}
   - component: {fileID: 831589615}
   - component: {fileID: 831589614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10661,7 +10555,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10900,7 +10794,7 @@ GameObject:
   - component: {fileID: 840399498}
   - component: {fileID: 840399497}
   - component: {fileID: 840399496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10985,7 +10879,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -11389,7 +11283,7 @@ GameObject:
   - component: {fileID: 858311524}
   - component: {fileID: 858311523}
   - component: {fileID: 858311522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11474,7 +11368,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -12335,7 +12229,7 @@ GameObject:
   - component: {fileID: 982492196}
   - component: {fileID: 982492195}
   - component: {fileID: 982492194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12420,7 +12314,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -12824,6 +12718,7 @@ GameObject:
   - component: {fileID: 1033162531}
   - component: {fileID: 1033162530}
   - component: {fileID: 1033162529}
+  - component: {fileID: 1033162534}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -12843,7 +12738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057d9c4ccaaf74c06aab85cdf61a61fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1298042511}
   playerHealthText: {fileID: 1336777094}
   playerBatteryText: {fileID: 140139894}
 --- !u!114 &1033162530
@@ -12875,7 +12769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -12930,6 +12824,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1033162534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033162528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da920b3b06d214b1eb47e030a6f53328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1037919629
 Mesh:
   m_ObjectHideFlags: 0
@@ -13506,7 +13412,7 @@ GameObject:
   - component: {fileID: 1155483163}
   - component: {fileID: 1155483162}
   - component: {fileID: 1155483161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ffff (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13591,7 +13497,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -13830,7 +13736,7 @@ GameObject:
   - component: {fileID: 1207830440}
   - component: {fileID: 1207830439}
   - component: {fileID: 1207830438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13915,7 +13821,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -14214,8 +14120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675486f9506a9462cb868c9679074bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 10
-  batteryJuice: 0
   skill: {fileID: 1298042510}
 --- !u!143 &1298042512
 CharacterController:
@@ -14267,7 +14171,7 @@ MonoBehaviour:
   isOn: 0
   maxUses: 0
   lives: 3
-  fallDepth: -20
+  fallDepth: -100
 --- !u!23 &1298042514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14349,7 +14253,7 @@ GameObject:
   - component: {fileID: 1314554435}
   - component: {fileID: 1314554434}
   - component: {fileID: 1314554433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14434,7 +14338,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -14932,7 +14836,7 @@ GameObject:
   - component: {fileID: 1335748436}
   - component: {fileID: 1335748435}
   - component: {fileID: 1335748434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15390,7 +15294,7 @@ GameObject:
   - component: {fileID: 1351399696}
   - component: {fileID: 1351399695}
   - component: {fileID: 1351399694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15460,7 +15364,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -16314,7 +16218,7 @@ GameObject:
   - component: {fileID: 1547250188}
   - component: {fileID: 1547250187}
   - component: {fileID: 1547250186}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16399,7 +16303,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -16634,7 +16538,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1561591945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17178,7 +17082,7 @@ GameObject:
   - component: {fileID: 1672222544}
   - component: {fileID: 1672222543}
   - component: {fileID: 1672222542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17263,7 +17167,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -17667,7 +17571,7 @@ GameObject:
   - component: {fileID: 1772522012}
   - component: {fileID: 1772522011}
   - component: {fileID: 1772522010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19730,7 +19634,7 @@ GameObject:
   - component: {fileID: 1948701532}
   - component: {fileID: 1948701531}
   - component: {fileID: 1948701530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19815,7 +19719,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -20054,7 +19958,7 @@ GameObject:
   - component: {fileID: 1993134692}
   - component: {fileID: 1993134691}
   - component: {fileID: 1993134690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crate (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20139,7 +20043,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -20378,7 +20282,7 @@ GameObject:
   - component: {fileID: 2015359138}
   - component: {fileID: 2015359137}
   - component: {fileID: 2015359136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20463,7 +20367,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -20702,7 +20606,7 @@ GameObject:
   - component: {fileID: 2041474939}
   - component: {fileID: 2041474938}
   - component: {fileID: 2041474937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21508,6 +21412,63 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &3780954214078921388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 52.938396
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969429565344251357, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957831969593075553, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
+      propertyPath: m_Name
+      value: Exit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d793cac860a9417e8ed57e609195def, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -21521,6 +21482,6 @@ SceneRoots:
   - {fileID: 1855154714}
   - {fileID: 767960160}
   - {fileID: 1854333985}
-  - {fileID: 226530090}
+  - {fileID: 3780954214078921388}
   - {fileID: 1838726039}
   - {fileID: 1033162533}

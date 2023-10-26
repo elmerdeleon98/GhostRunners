@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
         {
             StartCoroutine(FloatingCoroutine());
+            Debug.Log("space");
         }
     }
 

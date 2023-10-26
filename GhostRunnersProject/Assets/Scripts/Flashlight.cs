@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-    //player script access
-    public Player playerScript;
     private void OnTriggerEnter(Collider other)
     {
         //checks if the flashlight detects the enemy
@@ -13,7 +11,7 @@ public class Flashlight : MonoBehaviour
         {
             //deactivates the enemy if detected.
             other.gameObject.SetActive(false);
-            playerScript.batteryJuice--;
+            Player.batteryJuice--;
             Debug.Log("enemy was attacked");
 
         }
