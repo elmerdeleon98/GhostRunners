@@ -3,8 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Callbacks;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
 //Garcia, Mario
@@ -35,12 +33,11 @@ public class PlayerController : MonoBehaviour
     public int fallDepth;
 
     //Flying Variables
-    private bool isFloating;
     private float floatDuration = 3.0f;
 
     void Start()
     {
-        gravity = -9.81f;
+        floatDuration = 3.0f;
 
         //Hiding the cursor on start (press escape to get back cursor)
         Cursor.lockState = CursorLockMode.Locked;
@@ -52,18 +49,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        Attack();
         Fly();
-    }
-
-    public void Fly()
-    {
-        //if the player presses spacebar they will begin to fly
-        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
-        {
-            StartCoroutine(FloatingCoroutine());
-            Debug.Log("space");
-        }
+        Attack();
+        
     }
 
     private IEnumerator FloatingCoroutine()
@@ -80,10 +68,22 @@ public class PlayerController : MonoBehaviour
 
             timer += Time.deltaTime;
 
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
         gravity = originalGravity;
     }
+
+    public void Fly()
+    {
+        //if the player presses spacebar they will begin to fly
+        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
+        {
+            StartCoroutine(FloatingCoroutine());
+            Debug.Log("space");
+        }
+    }
+
+   
     //if the player left clicks the flashlight will turn on. 
     private void Attack()
     {
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             //makes it so that when you fall off you don't instantly fall at max gravity. 
-            velocity.y = -1f;
+            velocity.y -= -1f * Time.deltaTime;
         }
         else
         {

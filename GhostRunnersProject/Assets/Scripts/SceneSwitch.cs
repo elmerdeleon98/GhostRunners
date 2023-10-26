@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class SceneSwitch : MonoBehaviour
 {
     public static SceneSwitch instance;
+    public PlayerController player;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        //DontDestroyOnLoad(this.gameObject);
     }
 
     //Switches the scene depending on the scene's number
