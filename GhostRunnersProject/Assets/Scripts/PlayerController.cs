@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         startPosition = transform.position;
     }
 
+     
     void Update()
     {
         Move();
