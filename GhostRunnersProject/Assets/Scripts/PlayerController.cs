@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Rendering;
 //Garcia, Mario
@@ -33,12 +34,11 @@ public class PlayerController : MonoBehaviour
     public int fallDepth;
 
     //Flying Variables
-    private float floatDuration = 3.0f;
+    private bool isFloating;
+    private float remainingFloatDuration;
 
     void Start()
     {
-        floatDuration = 3.0f;
-
         //Hiding the cursor on start (press escape to get back cursor)
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -49,40 +49,69 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        Fly();
+        Float();
         Attack();
-        
+
     }
+    // Set the isFloating to true and set the maximum float duration
+    private void StartFloating()
+    {
+        isFloating = true;
+        remainingFloatDuration = 5.0f; 
+        StartCoroutine(FloatingCoroutine());
+    }
+
+    private void StopFloating()
+    {
+        isFloating = false;
+        StopCoroutine(FloatingCoroutine());
+    }
+
 
     private IEnumerator FloatingCoroutine()
     {
         //saving original gravity and changing it 
         float originalGravity = gravity;
         gravity = 2f;
-        float timer = 0f;
 
         //allow the player to fly while the floatduration is greater than the timer. 
-        while (timer < floatDuration)
+        while (isFloating)
         {
-            velocity.y = Mathf.Lerp(0f, 10f, timer / floatDuration);
-
-            timer += Time.deltaTime;
-
+            velocity.y = Mathf.Lerp(0f, 10f, (5.0f - remainingFloatDuration) / 5.0f);
             yield return new WaitForEndOfFrame();
         }
         gravity = originalGravity;
     }
 
-    public void Fly()
+    public void Float()
     {
-        //if the player presses spacebar they will begin to fly
-        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
+        // Check if the player is holding the spacebar to control floating
+        if (Input.GetKey(KeyCode.Space))
         {
-            StartCoroutine(FloatingCoroutine());
-            Debug.Log("space");
+            if (!isFloating && controller.isGrounded)
+            {
+                StartFloating();
+            }
         }
-    }
+        else
+        {
+            if (isFloating)
+            {
+                StopFloating();
+            }
+        }
 
+        if (isFloating)
+        {
+            // Decrease the remaining float duration and stop floating when it reaches 0
+            remainingFloatDuration -= Time.deltaTime;
+            if (remainingFloatDuration <= 0f)
+            {
+                StopFloating();
+            }
+        }
+
+    }
    
     //if the player left clicks the flashlight will turn on. 
     private void Attack()
@@ -146,11 +175,9 @@ public class PlayerController : MonoBehaviour
             Vector3 direction = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(direction * speed * Time.deltaTime);
 
-        }
-        //(new change)
+        }  
         //moves the player 
         controller.Move(velocity * Time.deltaTime);
-        //(new change)
 
         //checks to see if the player falls off the platform
         if (transform.position.y < fallDepth)
