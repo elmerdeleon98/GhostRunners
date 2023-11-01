@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
             }
         }
 
+        /*
         //recognises a player was hit by a trap
         if (other.CompareTag("Trap"))
         {
@@ -88,6 +89,7 @@ public class Player : MonoBehaviour
                 Debug.Log("Player was hit by trap!");
             }
         }
+        */
 
         //recognises a player picked up a battery
         if (other.CompareTag("Battery"))
@@ -99,6 +101,21 @@ public class Player : MonoBehaviour
             }
             Debug.Log("You have " + batteryJuice + " uses");
             other.gameObject.SetActive(false);
+        }
+
+        //recognises a player was hit by an arrow
+        if(other.CompareTag("Arrow"))
+        {
+            if(skill.isTranslucent == true)
+            {
+                Debug.Log("Player evaded Trap!");
+            }
+            else
+            {
+                Debug.Log("Player was hit by an arrow!");
+                playerHealth -= 5;
+            }
+
         }
     }
 

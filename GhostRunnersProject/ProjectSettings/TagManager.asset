@@ -13,6 +13,8 @@ TagManager:
   - Exit1
   - Exit2
   - Exit3
+  - Arrow
+  - Wall
   layers:
   - Default
   - TransparentFX
