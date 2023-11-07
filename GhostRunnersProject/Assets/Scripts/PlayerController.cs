@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     //Respawning
     private Vector3 startPosition;
-    public int lives = 3;
+    public static int lives = 3;
     public int fallDepth;
 
     //Flying Variables
