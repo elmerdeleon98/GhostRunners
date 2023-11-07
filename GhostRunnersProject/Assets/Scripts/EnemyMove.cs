@@ -84,7 +84,7 @@ public class EnemyMove : MonoBehaviour
             }
             else
             {
-                transform.position += Vector3.left * Time.deltaTime * speed;
+                transform.position += (Vector3.left + Vector3.back) * Time.deltaTime * speed;
             }
         }
         else
@@ -95,7 +95,7 @@ public class EnemyMove : MonoBehaviour
             }
             else
             {
-                transform.position += Vector3.right * Time.deltaTime * speed;
+                transform.position += (Vector3.right + Vector3.forward) * Time.deltaTime * speed;
             }
         }
     }
