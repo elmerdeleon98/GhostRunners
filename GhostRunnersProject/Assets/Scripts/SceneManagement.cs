@@ -25,10 +25,19 @@ public class SceneManagement : MonoBehaviour
                 PlayerPrefs.SetInt("LastGameplayScene", gameSceneIndex);
                 PlayerPrefs.Save();
             }
+            PlayerController.lives--;
+            Player.playerHealth = 10;
+            SceneManager.LoadScene(gameSceneIndex);
+        }
+        
+        if (PlayerController.lives <= 0)
+        {
             SceneManager.LoadScene(7);
             Player.playerHealth = 10;
+            PlayerController.lives = 3;
             Cursor.lockState = CursorLockMode.None;
         }
+       
     }
 
     public void appClose()
