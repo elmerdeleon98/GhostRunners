@@ -15,6 +15,7 @@ TagManager:
   - Exit3
   - Arrow
   - Wall
+  - DeathZone
   layers:
   - Default
   - TransparentFX

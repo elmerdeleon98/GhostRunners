@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         //stores the start position of the Player when the scene starts
-        startPosition = transform.position;
+        //startPosition = transform.position;
     }
 
     void Update()
@@ -178,18 +178,21 @@ public class PlayerController : MonoBehaviour
         }  
         //moves the player 
         controller.Move(velocity * Time.deltaTime);
-
+        /*
         //checks to see if the player falls off the platform
         if (transform.position.y < fallDepth)
         {
             Respawn();
         }
+        */
     }
 
     //Respawns the player at the start of the level
+    /*
     private void Respawn()
     {
         transform.position = startPosition;
         lives--;
     }
+    */
 }

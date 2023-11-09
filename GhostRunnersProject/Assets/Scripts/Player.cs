@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     public GhostJump skill;
 
     public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
+   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -61,6 +63,14 @@ public class Player : MonoBehaviour
                 Debug.Log("Player was hit by an enemy!");
                 playerHealth -= 3;
             }
+        }
+
+        //recognises a player hitting the death zone
+        if (other.CompareTag("DeathZone"))
+        {
+            PlayerController.lives--;
+            Player.playerHealth = 10;
+            SceneManager.LoadScene(SceneManagement.gameSceneIndex);
         }
 
         /*

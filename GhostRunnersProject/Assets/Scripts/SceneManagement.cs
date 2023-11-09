@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    private int gameSceneIndex; 
+    public static int gameSceneIndex; 
 
     void Start()
     {
@@ -37,8 +37,9 @@ public class SceneManagement : MonoBehaviour
             PlayerController.lives = 3;
             Cursor.lockState = CursorLockMode.None;
         }
-       
+
     }
+        
 
     public void appClose()
     {
