@@ -24,6 +24,7 @@ public class SceneManagement : MonoBehaviour
                 // Save the last valid gameplay scene index to PlayerPrefs
                 PlayerPrefs.SetInt("LastGameplayScene", gameSceneIndex);
                 PlayerPrefs.Save();
+                
             }
             PlayerController.lives--;
             Player.playerHealth = 10;
@@ -66,5 +67,20 @@ public class SceneManagement : MonoBehaviour
     public void Controls()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void playerHitDeath()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 7)
+        {
+            gameSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            // Save the last valid gameplay scene index to PlayerPrefs
+            PlayerPrefs.SetInt("LastGameplayScene", gameSceneIndex);
+            PlayerPrefs.Save();
+
+        }
+        PlayerController.lives--;
+        Player.playerHealth = 10;
+        SceneManager.LoadScene(gameSceneIndex);
     }
 }

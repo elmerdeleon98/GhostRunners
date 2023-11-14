@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     public GhostJump skill;
 
+    public SceneManagement sceneScript;
+
     public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
    
 
@@ -68,9 +70,7 @@ public class Player : MonoBehaviour
         //recognises a player hitting the death zone
         if (other.CompareTag("DeathZone"))
         {
-            PlayerController.lives--;
-            Player.playerHealth = 10;
-            SceneManager.LoadScene(SceneManagement.gameSceneIndex);
+            sceneScript.playerHitDeath();
         }
 
         /*
