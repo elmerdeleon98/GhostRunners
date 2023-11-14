@@ -73,9 +73,9 @@ public class Player : MonoBehaviour
             sceneScript.playerHitDeath();
         }
 
-        /*
-        //recognises a player was hit by a trap
-        if (other.CompareTag("Trap"))
+
+        //recognises a player was hit by a spike trap
+        if (other.CompareTag("Spikes"))
         {
             if (skill.isTranslucent == true)
             {
@@ -84,8 +84,11 @@ public class Player : MonoBehaviour
             else
             {
                 Debug.Log("Player was hit by trap!");
+                playerHealth -= 5;
             }
         }
+        /*
+        
 
         //recognises a player was hit by a trap
         if (other.CompareTag("Trap2"))

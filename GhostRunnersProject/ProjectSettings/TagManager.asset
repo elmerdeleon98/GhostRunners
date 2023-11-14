@@ -16,6 +16,7 @@ TagManager:
   - Arrow
   - Wall
   - DeathZone
+  - Spikes
   layers:
   - Default
   - TransparentFX
