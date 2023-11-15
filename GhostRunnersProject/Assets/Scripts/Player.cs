@@ -100,6 +100,12 @@ public class Player : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
+        if(other.CompareTag("Coin"))
+        {
+            DoorUnlock.coinCount++;
+            other.gameObject.SetActive(false);
+        }
+
         //recognises a player was hit by an arrow
         if(other.CompareTag("Arrow"))
         {
