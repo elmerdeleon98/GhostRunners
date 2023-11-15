@@ -14754,7 +14754,7 @@ GameObject:
   - component: {fileID: 1320279091}
   m_Layer: 0
   m_Name: toxicwaste
-  m_TagString: Untagged
+  m_TagString: DeathZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14789,7 +14789,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -15656,11 +15656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2148845938661506505, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00013817428
+      value: 0.0001381915
       objectReference: {fileID: 0}
     - target: {fileID: 2148845938661506505, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000019649393
+      value: -0.000019651838
       objectReference: {fileID: 0}
     - target: {fileID: 3599971885936765754, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_LocalPosition.x

@@ -87,22 +87,6 @@ public class Player : MonoBehaviour
                 playerHealth -= 5;
             }
         }
-        /*
-        
-
-        //recognises a player was hit by a trap
-        if (other.CompareTag("Trap2"))
-        {
-            if (skill.isTranslucent == true)
-            {
-                Debug.Log("Player evaded Trap!");
-            }
-            else
-            {
-                Debug.Log("Player was hit by trap!");
-            }
-        }
-        */
 
         //recognises a player picked up a battery
         if (other.CompareTag("Battery"))
