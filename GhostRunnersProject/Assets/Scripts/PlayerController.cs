@@ -34,13 +34,18 @@ public class PlayerController : MonoBehaviour
 
     //Flying Variables
     private bool isFloating;
-    private float remainingFloatDuration;
+    public float remainingFloatDuration;
+    public float maxFloatDuration = 5f;
+
+    public FloatBar floatBar;
 
     void Start()
     {
         //Hiding the cursor on start (press escape to get back cursor)
         Cursor.lockState = CursorLockMode.Locked;
 
+        remainingFloatDuration = maxFloatDuration;
+        floatBar.MaxDuration(maxFloatDuration);
         //stores the start position of the Player when the scene starts
         //startPosition = transform.position;
     }
@@ -50,7 +55,6 @@ public class PlayerController : MonoBehaviour
         Move();
         Float();
         Attack();
-
     }
     // Set the isFloating to true and set the maximum float duration
     private void StartFloating()
@@ -76,7 +80,7 @@ public class PlayerController : MonoBehaviour
         //allow the player to fly while the floatduration is greater than the timer. 
         while (isFloating)
         {
-            velocity.y = Mathf.Lerp(0f, 10f, (5.0f - remainingFloatDuration) / 5.0f);
+            velocity.y = Mathf.Lerp(0f, 10f, (maxFloatDuration - remainingFloatDuration) / maxFloatDuration);
             yield return new WaitForEndOfFrame();
         }
         gravity = originalGravity;
@@ -84,6 +88,7 @@ public class PlayerController : MonoBehaviour
 
     public void Float()
     {
+        floatBar.SetDuration(remainingFloatDuration);
         // Check if the player is holding the spacebar to control floating
         if (Input.GetKey(KeyCode.Space))
         {
