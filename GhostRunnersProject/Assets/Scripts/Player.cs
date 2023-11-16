@@ -136,10 +136,10 @@ public class Player : MonoBehaviour
         }
 
         //checks if health exceeds
-        if (playerHealth > 30)
+        if (playerHealth > 20)
         {
             Debug.Log("Player's health exceeded the maximum. Setting to 30.");
-            playerHealth = 30;
+            playerHealth = 20;
         }
     }
 
