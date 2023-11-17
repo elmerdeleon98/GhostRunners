@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         isOn = Input.GetKey(KeyCode.Mouse0);
 
-        if (isOn)
+        if (isOn && Player.batteryJuice >0)
         {
             flashlight.SetActive(true);
         }
