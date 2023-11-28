@@ -17,18 +17,24 @@ public class SceneManagement : MonoBehaviour
     {
         if (Player.playerHealth <= 0)
         {
+            ///ORIGINAL CODE
             // If the current scene is not the game over scene, store it as the last gameplay scene
-            if (SceneManager.GetActiveScene().buildIndex != 7)
+            /*if (SceneManager.GetActiveScene().buildIndex != 7)
             {
                 gameSceneIndex = SceneManager.GetActiveScene().buildIndex;
                 // Save the last valid gameplay scene index to PlayerPrefs
                 PlayerPrefs.SetInt("LastGameplayScene", gameSceneIndex);
                 PlayerPrefs.Save();
                 
-            }
+            }*/
             PlayerController.lives--;
             Player.playerHealth = 10;
-            SceneManager.LoadScene(gameSceneIndex);
+            //SceneManager.LoadScene(gameSceneIndex);
+            ///ORIGINAL CODE
+
+            //Checkpoint Code
+            //teleport the player to the location of the checkpoint. 
+            //Player.player.transform.position = CheckPoint.currentCheckpoint;
         }
         
         if (PlayerController.lives <= 0)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,9 +12,9 @@ public class Player : MonoBehaviour
     public GhostJump skill;
 
     public SceneManagement sceneScript;
-
-    public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
+    public GameObject player; //my attempt at getting the position so I can teleport the player
    
+    //public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
 
     private void OnTriggerEnter(Collider other)
     {
