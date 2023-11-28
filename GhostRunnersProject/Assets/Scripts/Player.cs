@@ -141,6 +141,16 @@ public class Player : MonoBehaviour
             Debug.Log("Player's health exceeded the maximum. Setting to 30.");
             playerHealth = 20;
         }
+
+        if(other.CompareTag("Light"))
+        {
+            //coroutine that damages the player every x seconds whil inside the light
+            InvokeRepeating("DamagePerSecond", 2f, 4f);
+        }
     }
 
+    public void DamagePerSecond()
+    {
+        playerHealth--;
+    }
 }
