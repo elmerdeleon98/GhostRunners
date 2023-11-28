@@ -18,6 +18,7 @@ TagManager:
   - DeathZone
   - Spikes
   - Coin
+  - FakePillar
   layers:
   - Default
   - TransparentFX
