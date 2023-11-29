@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    public static int gameSceneIndex; 
+    public static int gameSceneIndex;
 
     void Start()
     {
@@ -27,6 +27,9 @@ public class SceneManagement : MonoBehaviour
                 PlayerPrefs.Save();
                 
             }*/
+
+            //TELEPORT FUNCTION HERE//
+            Player.isDead = true;
             PlayerController.lives--;
             Player.playerHealth = 10;
             //SceneManager.LoadScene(gameSceneIndex);
@@ -34,7 +37,7 @@ public class SceneManagement : MonoBehaviour
 
             //Checkpoint Code
             //teleport the player to the location of the checkpoint. 
-            //Player.player.transform.position = CheckPoint.currentCheckpoint;
+            
         }
         
         if (PlayerController.lives <= 0)
@@ -46,7 +49,7 @@ public class SceneManagement : MonoBehaviour
         }
 
     }
-        
+ 
 
     public void appClose()
     {
@@ -77,6 +80,7 @@ public class SceneManagement : MonoBehaviour
 
     public void playerHitDeath()
     {
+        /*
         if (SceneManager.GetActiveScene().buildIndex != 7)
         {
             gameSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -88,5 +92,9 @@ public class SceneManagement : MonoBehaviour
         PlayerController.lives--;
         Player.playerHealth = 10;
         SceneManager.LoadScene(gameSceneIndex);
+        */
+        Player.isDead = true;
+        PlayerController.lives--;
+        Player.playerHealth = 10;
     }
 }

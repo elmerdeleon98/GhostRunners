@@ -1,25 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    //checkpoints
-    public GameObject CheckPointPrefab;
-    public GameObject CheckPointPrefab2;
-    public GameObject CheckPointPrefab3;
-    public GameObject CheckPointPrefab4;
-    public GameObject CheckPointPrefab5;
-
-    public static Vector3 currentCheckpoint;
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Enemy"))
         {
-            currentCheckpoint = transform.position; //saves the location of the checkpoint. 
-            //Player.playerPos = currentCheckpoint; //Use this to actually teleport. 
-            Debug.Log("check point hit");
+            if (other.CompareTag("Enemy"))
+            {
+                //deactivates the enemy if detected.
+                other.gameObject.SetActive(false);
+            }
         }
     }
+    
 }

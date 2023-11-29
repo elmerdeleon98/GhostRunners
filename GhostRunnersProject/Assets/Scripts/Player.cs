@@ -6,15 +6,38 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    //collectibles
     public static int playerHealth = 10;
     public static int batteryJuice = 5;
 
+    //skills
     public GhostJump skill;
 
+    //scene
     public SceneManagement sceneScript;
-    public GameObject player; //my attempt at getting the position so I can teleport the player
-   
+
+    //checkpoint
+    public Transform DefaultSpawnPos;
+    public static Vector3 checkPointPos;
+    public static bool isDead = false;
+
     //public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
+
+    private void Start()
+    {
+        checkPointPos = DefaultSpawnPos.transform.position;
+    }
+
+    public void Update()
+    {
+        if (isDead)
+        {
+            Debug.Log("DIED");
+            Debug.Log(checkPointPos);
+            Teleport(checkPointPos);
+            isDead = false;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -97,6 +120,10 @@ public class Player : MonoBehaviour
             {
                 batteryJuice++;
             }
+            if (batteryJuice < 0)
+            {
+                batteryJuice = 0;
+            }
             Debug.Log("You have " + batteryJuice + " uses");
             other.gameObject.SetActive(false);
         }
@@ -148,6 +175,18 @@ public class Player : MonoBehaviour
             //coroutine that damages the player every x seconds whil inside the light
             InvokeRepeating("DamagePerSecond", 2f, 4f);
         }
+
+        if(other.CompareTag("CheckPoint1"))
+        {
+            checkPointPos = transform.position;
+
+            Debug.Log("Checkpoint Saved to :" + checkPointPos);
+        }
+    }
+
+    public void Teleport(Vector3 newPosition)
+    {
+        transform.position = newPosition;
     }
 
     public void DamagePerSecond()
