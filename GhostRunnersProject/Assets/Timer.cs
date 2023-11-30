@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     private bool isMoving = false;
 
     //timer variables
-    public float timer = 5f;
+    static public float timer = 120f;
 
     // Update is called once per frame
     void Update()
