@@ -31,6 +31,7 @@ public class SceneManagement : MonoBehaviour
             Player.isDead = true;
             PlayerController.lives--;
             Player.playerHealth = 10;
+            Player.batteryJuice = 5;
             //SceneManager.LoadScene(gameSceneIndex);
             ///ORIGINAL CODE
             
@@ -44,6 +45,7 @@ public class SceneManagement : MonoBehaviour
             SceneManager.LoadScene(7);
             Player.playerHealth = 10;
             PlayerController.lives = 3;
+            Player.batteryJuice = 5;
             Cursor.lockState = CursorLockMode.None;
         }
 
@@ -95,5 +97,6 @@ public class SceneManagement : MonoBehaviour
         Player.isDead = true;
         PlayerController.lives--;
         Player.playerHealth = 10;
+        Player.batteryJuice = 5;
     }
 }
