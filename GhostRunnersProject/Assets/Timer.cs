@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
 
         timer -= Time.deltaTime;
 
-        //Debug.Log(timer);
+        Debug.Log(timer);
 
         if (timer < 0)
         {

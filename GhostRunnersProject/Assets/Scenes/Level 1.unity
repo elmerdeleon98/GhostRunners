@@ -10525,20 +10525,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106003555061347046, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00013827207
+      value: 0.00013823807
       objectReference: {fileID: 0}
     - target: {fileID: 4106003555061347046, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000017102924
+      value: -0.000017098675
       objectReference: {fileID: 0}
     - target: {fileID: 5161354558367328167, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: sceneScript
       value: 
       objectReference: {fileID: 666195928}
-    - target: {fileID: 5161354558367328167, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
-      propertyPath: DefaultSpawnPos
-      value: 
-      objectReference: {fileID: 1422293205}
     - target: {fileID: 7191825018973218116, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_Name
       value: Player
@@ -13498,7 +13494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202573089}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12275482, y: 0.00013828908, z: -0.000017105012, w: 0.992437}
+  m_LocalRotation: {x: 0.12275482, y: 0.00013822073, z: -0.00001709656, w: 0.992437}
   m_LocalPosition: {x: -24.481745, y: 3.0682516, z: -167.56389}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16952,11 +16948,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &1422293205 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6797914727143815725, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
-  m_PrefabInstance: {fileID: 868892325}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1460983574
 Mesh:
   m_ObjectHideFlags: 0
