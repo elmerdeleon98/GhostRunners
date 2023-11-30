@@ -19,6 +19,7 @@ TagManager:
   - Spikes
   - Coin
   - FakePillar
+  - Light
   layers:
   - Default
   - TransparentFX

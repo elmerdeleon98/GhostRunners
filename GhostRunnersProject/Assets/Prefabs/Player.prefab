@@ -285,6 +285,37 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 3993589193136211314}
+--- !u!1 &1609097582228212448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6797914727143815725}
+  m_Layer: 0
+  m_Name: DefaultSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6797914727143815725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609097582228212448}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.0073039304, z: 0, w: 0.99997336}
+  m_LocalPosition: {x: 0.04, y: -0.51, z: -0.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 763232218373243387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053526558796992904
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,6 +1020,7 @@ Transform:
   - {fileID: 2394252129824484185}
   - {fileID: 1312163009439345782}
   - {fileID: 3021493196064287625}
+  - {fileID: 6797914727143815725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0.837, z: 0}
 --- !u!33 &4174012690547134545
@@ -1065,6 +1097,9 @@ MonoBehaviour:
   isOn: 0
   maxUses: 0
   fallDepth: -100
+  remainingFloatDuration: 0
+  maxFloatDuration: 5
+  floatBar: {fileID: 0}
 --- !u!143 &7957771573186250539
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1104,6 +1139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skill: {fileID: 6942274495437087841}
+  sceneScript: {fileID: 0}
+  DefaultSpawnPos: {fileID: 0}
 --- !u!114 &6942274495437087841
 MonoBehaviour:
   m_ObjectHideFlags: 0
