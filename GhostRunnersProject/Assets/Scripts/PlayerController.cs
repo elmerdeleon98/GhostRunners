@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         Move();
         Float();
         Attack();
+        Instructions();
     }
     // Set the isFloating to true and set the maximum float duration
     private void StartFloating()
@@ -132,6 +133,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //if the player presses C they will bring up the controls panel
+    private void Instructions()
+    {
+        if (Input.GetKey(KeyCode.C))
+        {
+            ControlsPanel.isOn = true;
+            Time.timeScale = 0;
+        }
+        if (Input.GetKey(KeyCode.X))
+        {
+            ControlsPanel.isOn = false;
+            Time.timeScale = 1;
+        }
+    }
 
     private void Move()
     {
