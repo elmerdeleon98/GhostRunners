@@ -9034,6 +9034,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f440c7da5495f482fb891169b9a3bf81, type: 3}
+--- !u!1001 &315606141
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 102130879479381065, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_Name
+      value: DaylightTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296391497875348304, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 636.6005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296391497875348304, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -282
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724717778279795813, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.591532
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.7160757
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 195
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537446606127610229, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a00f3073536535f498e1e535a7f4ab6d, type: 3}
 --- !u!43 &315651220
 Mesh:
   m_ObjectHideFlags: 0
@@ -51798,6 +51875,7 @@ MonoBehaviour:
   playerBatteryText: {fileID: 1550808276}
   playerLivesText: {fileID: 1009496798}
   playerCoinsText: {fileID: 1385613504}
+  daylightTimer: {fileID: 0}
 --- !u!114 &1345540792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80258,3 +80336,4 @@ SceneRoots:
   - {fileID: 1081033775}
   - {fileID: 21586766}
   - {fileID: 883292214}
+  - {fileID: 315606141}
