@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Physics.SyncTransforms();
+
         Move();
         Float();
         Attack();
