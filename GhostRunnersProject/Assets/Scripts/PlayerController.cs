@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform cam;
     public float speed = 6f;
-    public float walkingSpeed = 6f;
-    public float sprintSpeed = 10f;
+    public float walkingSpeed = 6f;//initial is 6
+    public float sprintSpeed = 10f;//initial is 10 
     public float gravity = -9.81f;
     [SerializeField] private bool isSprinting;
 
