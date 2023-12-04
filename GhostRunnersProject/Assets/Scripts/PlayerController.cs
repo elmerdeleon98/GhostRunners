@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //initializing temporary variable that holds the velocity
-        float sprintSpeed = 10f;
+        //float sprintSpeed = 10f;
         isSprinting = Input.GetKey(KeyCode.LeftShift);
 
         //checks to see if the player is sprinting and changes the speed of the player. 
@@ -186,7 +186,7 @@ public class PlayerController : MonoBehaviour
         if (movementInput.magnitude >= 0.1f)
         {
             //getting the direction of the player inputs 
-            Vector3 moveVec = transform.TransformDirection(movementInput);
+            Vector3 moveVec = transform.TransformDirection(movementInput).normalized;
 
             //move the player according to the cameras direction
             float targetAngle = Mathf.Atan2(movementInput.x, movementInput.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
