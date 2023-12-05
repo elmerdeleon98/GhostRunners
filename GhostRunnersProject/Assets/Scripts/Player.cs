@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Compilation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,8 +22,6 @@ public class Player : MonoBehaviour
     public static Vector3 checkPointPos;
     public static bool isDead = false;
 
-    //public static Vector3 lastCheckPointPos = new Vector3(116, 1, -103);
-
     private void Start()
     {
         checkPointPos = DefaultSpawnPos.transform.position;
@@ -30,6 +29,7 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
+
         if (isDead)
         {
             Debug.Log("DIED");
@@ -183,6 +183,8 @@ public class Player : MonoBehaviour
             Debug.Log("Checkpoint Saved to :" + checkPointPos);
         }
     }
+    
+   
 
     public void Teleport(Vector3 newPosition)
     {
