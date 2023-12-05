@@ -46,7 +46,7 @@ public class SceneManagement : MonoBehaviour
             Player.playerHealth = 10;
             PlayerController.lives = 3;
             Player.batteryJuice = 5;
-            Timer.timer = 300f;
+            Timer.timer = 350f;
             Cursor.lockState = CursorLockMode.None;
         }
 
