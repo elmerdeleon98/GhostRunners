@@ -16,12 +16,20 @@ public class BossEnemy : MonoBehaviour
 
     void ShootProjectile()
     {
-        //random direction for the projectile
+        // Calculate a random direction for the projectile
         Vector3 randomDirection = Random.onUnitSphere;
 
-        randomDirection.y = 0f;
+        // Calculate the spawn position based on the random direction
+        Vector3 randomSpawnPosition = projectileSpawnPoint.position + randomDirection * 5f; // Adjust the distance as needed
 
-        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+        // Ensure the projectiles stay in the horizontal plane
+        randomSpawnPosition.y = projectileSpawnPoint.position.y;
+
+        // Calculate the direction from the random position to the player
+        Vector3 direction = (projectileSpawnPoint.position - randomSpawnPosition).normalized;
+
+        // Instantiate the projectile and set its velocity
+        GameObject projectile = Instantiate(projectilePrefab, randomSpawnPosition, Quaternion.LookRotation(direction));
         projectile.GetComponent<ProjectileController>().speed = projectileSpeed;
     }
 }
