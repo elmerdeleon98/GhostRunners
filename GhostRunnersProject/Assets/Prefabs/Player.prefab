@@ -708,7 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4294967295
   m_IgnoreTag: Player
   m_TransparentLayers:
     serializedVersion: 2
@@ -1089,8 +1089,8 @@ MonoBehaviour:
   controller: {fileID: 7957771573186250539}
   cam: {fileID: 0}
   speed: 6
-  walkingSpeed: 6
-  sprintSpeed: 10
+  walkingSpeed: 9
+  sprintSpeed: 15
   gravity: -9.8
   isSprinting: 0
   uses: 0
