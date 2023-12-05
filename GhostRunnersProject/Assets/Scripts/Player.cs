@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Battery"))
         {
             Debug.Log("Picked up battery");
-            if(batteryJuice < 5)
+            if(batteryJuice < 10)
             {
                 batteryJuice++;
             }
@@ -148,25 +148,10 @@ public class Player : MonoBehaviour
             }
 
         }
-        //health limit
-        if (other.CompareTag("HealthPack"))
-        {
-            Debug.Log("Player picked up a health pack.");
-
-            //checks if player does not pass 30
-            if (playerHealth < 30)
-            {
-                playerHealth += 5;
-
-                Debug.Log("Player's health is now: " + playerHealth);
-                other.gameObject.SetActive(false);
-            }
-        }
 
         //checks if health exceeds
         if (playerHealth > 20)
         {
-            Debug.Log("Player's health exceeded the maximum. Setting to 30.");
             playerHealth = 20;
         }
 
