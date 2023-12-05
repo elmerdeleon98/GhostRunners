@@ -18,5 +18,6 @@ public class SceneSwitch : MonoBehaviour
     public void switchScene(int sceneNumber)
     {
         SceneManager.LoadScene(sceneNumber);
+        Timer.timer = 250f;
     }
 }
