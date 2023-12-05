@@ -4892,6 +4892,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (24)
@@ -18427,6 +18431,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (23)
@@ -20581,7 +20589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: detectionRadius
-      value: 37.4
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
@@ -21074,6 +21082,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (17)
@@ -22639,6 +22651,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (21)
@@ -28652,7 +28668,7 @@ RectTransform:
   m_Father: {fileID: 1314399089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -30917,6 +30933,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (26)
@@ -30978,6 +30998,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (19)
@@ -33126,6 +33150,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (16)
@@ -36879,6 +36907,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (22)
@@ -37230,7 +37262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: detectionRadius
-      value: 37.4
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
@@ -37800,7 +37832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187772617167571187, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: detectionRadius
-      value: 26
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6227753193368867521, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: m_Name
@@ -41823,6 +41855,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (31)
@@ -46169,6 +46205,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (32)
@@ -48634,6 +48674,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (20)
@@ -50164,7 +50208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187772617167571187, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: detectionRadius
-      value: 28
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6227753193368867521, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: m_Name
@@ -55021,7 +55065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1345540788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57942,7 +57986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: detectionRadius
-      value: 37.4
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
@@ -66258,7 +66302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: detectionRadius
-      value: 37.4
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
@@ -66714,6 +66758,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (25)
@@ -67078,6 +67126,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724840568}
+    - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
+      propertyPath: detectionRadius
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy (27)
@@ -69680,7 +69732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1506674474001325617, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: detectionRadius
-      value: 37.4
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 2174596187667414811, guid: 17b3254daa36345a0ae387797f9ab6b8, type: 3}
       propertyPath: m_Name
@@ -70684,11 +70736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6971740222676260127, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -83.08
+      value: -83.61
       objectReference: {fileID: 0}
     - target: {fileID: 6971740222676260127, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -356.83
+      value: -356.7
       objectReference: {fileID: 0}
     - target: {fileID: 6971740222676260127, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -74864,7 +74916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187772617167571187, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: detectionRadius
-      value: 28
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6227753193368867521, guid: 02df64f6222de46499d31e43dc79b2d2, type: 3}
       propertyPath: m_Name
