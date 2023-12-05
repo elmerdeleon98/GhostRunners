@@ -12,7 +12,6 @@ public class DoorUnlock : MonoBehaviour
     public void Start()
     {
         coinCount = 0;
-        requiredCoins = 5;
     }
 
     public void Update()
