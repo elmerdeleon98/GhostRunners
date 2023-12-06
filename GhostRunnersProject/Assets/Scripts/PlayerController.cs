@@ -58,6 +58,11 @@ public class PlayerController : MonoBehaviour
         Float();
         Attack();
         Instructions();
+
+        if (controller.isGrounded)
+        {
+            floatBar.MaxDuration(maxFloatDuration);
+        }
     }
     // Set the isFloating to true and set the maximum float duration
     private void StartFloating()
@@ -98,6 +103,8 @@ public class PlayerController : MonoBehaviour
             if (!isFloating && controller.isGrounded)
             {
                 StartFloating();
+
+                
             }
         }
         else
