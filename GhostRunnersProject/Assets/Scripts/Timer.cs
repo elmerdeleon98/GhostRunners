@@ -15,6 +15,11 @@ public class Timer : MonoBehaviour
     //timer variables
     static public float timer = 350f;
 
+    private void Start()
+    {
+        moveLight.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +31,7 @@ public class Timer : MonoBehaviour
 
         if (timer < 0)
         {
+            moveLight.SetActive(true);
             MoveLight();
         }
 
