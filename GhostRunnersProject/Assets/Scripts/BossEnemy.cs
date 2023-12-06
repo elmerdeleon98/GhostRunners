@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossEnemy : MonoBehaviour
 {
+    public GameObject door;
+    static public int health;
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
     public float shootingInterval = 2f;
@@ -11,7 +13,18 @@ public class BossEnemy : MonoBehaviour
 
     void Start()
     {
+        health = 9;
         InvokeRepeating("ShootProjectile", 0f, shootingInterval);
+    }
+
+    private void Update()
+    {
+        if(health <= 0) 
+        {
+            GameObject newDoor = door;
+            door.SetActive(false);
+            Destroy(this.gameObject);
+        }
     }
 
     void ShootProjectile()
