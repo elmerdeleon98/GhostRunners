@@ -23,6 +23,7 @@ TagManager:
   - MovingPlatform
   - DestroyCube
   - Wrong
+  - BossProjectile
   layers:
   - Default
   - TransparentFX

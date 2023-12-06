@@ -172,6 +172,11 @@ public class Player : MonoBehaviour
         {
             playerHealth -= 5;
         }
+
+        if (other.CompareTag("BossProjectile"))
+        {
+            playerHealth -= 5;
+        }
     }
     
    
