@@ -167,6 +167,11 @@ public class Player : MonoBehaviour
 
             Debug.Log("Checkpoint Saved to :" + checkPointPos);
         }
+
+        if(other.CompareTag("Wrong"))
+        {
+            playerHealth -= 5;
+        }
     }
     
    

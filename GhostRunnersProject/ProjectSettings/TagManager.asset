@@ -22,6 +22,7 @@ TagManager:
   - Light
   - MovingPlatform
   - DestroyCube
+  - Wrong
   layers:
   - Default
   - TransparentFX

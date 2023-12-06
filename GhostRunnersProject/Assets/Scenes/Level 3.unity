@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 21586761}
   m_Layer: 0
   m_Name: DestroyDoorBlock3
-  m_TagString: DestroyCube
+  m_TagString: Wrong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36509,7 +36509,7 @@ GameObject:
   - component: {fileID: 883292209}
   m_Layer: 0
   m_Name: DestroyDoorBlock4
-  m_TagString: DestroyCube
+  m_TagString: Wrong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45402,7 +45402,7 @@ GameObject:
   - component: {fileID: 1081033770}
   m_Layer: 0
   m_Name: DestroyDoorBlock2
-  m_TagString: DestroyCube
+  m_TagString: Wrong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85892,6 +85892,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 833681384}
+  - {fileID: 241461128}
   - {fileID: 1844306547}
   - {fileID: 1586685144}
   - {fileID: 1318591713}
@@ -85915,7 +85916,6 @@ SceneRoots:
   - {fileID: 2054670256}
   - {fileID: 1265364913}
   - {fileID: 635022949}
-  - {fileID: 241461128}
   - {fileID: 31561808}
   - {fileID: 1202652399}
   - {fileID: 1212578663}
