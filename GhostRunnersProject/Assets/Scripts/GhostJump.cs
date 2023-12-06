@@ -8,47 +8,58 @@ public class GhostJump : MonoBehaviour
     public bool isTranslucent = false;
     public bool isBlocked = false;
 
-    // Update is called once per frame
+    public GhostTimer ghostTimer;
+
+    private void Start()
+    {
+        // Initialize the GhostTimer
+        ghostTimer.MaxDuration(5f);
+    }
+
     void Update()
     {
-        //If Q is pressed and the player isn't blocked, it will activare the translucent state
-
+        // If Q is pressed and the player isn't blocked, it will activate the translucent state
         if (isBlocked == false)
         {
             if (Input.GetKey("q") && isTranslucent == false)
             {
                 isTranslucent = true;
+                StartCoroutine(GhostTimerCountdown());
             }
         }
-        
-        //if translucent is on, then change the color of the player and start the countdown
-        if (isTranslucent==true)
+
+        // If translucent is on, then change the color of the player
+        if (isTranslucent == true)
         {
             myObject.material.color = Color.magenta;
-            StartCoroutine(GhostTimer());
+            ghostTimer.SetDuration(ghostTimer.ghostSlider.value - Time.deltaTime);
         }
 
-        //is the player is blocked, it will wait 10 secs
+        if (isTranslucent == false && isBlocked == true)
+        {
+            ghostTimer.SetDuration(ghostTimer.ghostSlider.value + Time.deltaTime);
+        }
+
+        // If the player is blocked, it will wait 10 seconds
         if (isBlocked == true)
         {
             StartCoroutine(CoolDown());
         }
-
     }
-    //will wait 5 secs before turning off translucent state, change the color back, start cool down
-    public IEnumerator GhostTimer()
+
+    // Will wait 5 seconds before turning off translucent state, change the color back, start cool down
+    public IEnumerator GhostTimerCountdown()
     {
         yield return new WaitForSeconds(5f);
         myObject.material.color = Color.grey;
         isTranslucent = false;
         isBlocked = true;
-
     }
-    //will wait 10 secs before unblocking
+
+    // Will wait 10 seconds before unblocking
     public IEnumerator CoolDown()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         isBlocked = false;
     }
-
 }
