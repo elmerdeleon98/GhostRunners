@@ -21,6 +21,7 @@ TagManager:
   - FakePillar
   - Light
   - MovingPlatform
+  - DestroyCube
   layers:
   - Default
   - TransparentFX

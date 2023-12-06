@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CubeColorChange : MonoBehaviour
 {
-    public Material greenMaterial; // Assign a green material to this in the Unity Editor
+    public Material greenMaterial; //assign a green material to this in the Unity Editor
 
     void OnTriggerEnter(Collider other)
     {
