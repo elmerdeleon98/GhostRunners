@@ -5,61 +5,37 @@ using UnityEngine;
 public class ArrowSpawner : MonoBehaviour
 {
     public GameObject arrowPrefab;
-    public Transform arrowPosRight;
-    public Transform arrowPosLeft;
-    public float arrowSpeed = 10f;
-    public float timeBetweenShots = 2f;
-    private float nextFireTime = 0f;
-    public bool shootingLeft = false;
+    public Transform spawnPosition;
+    public Transform targetLocation;
 
-    private void Start()
-    {
-        nextFireTime = Time.time + timeBetweenShots;
-    }
+    public float spawnRate = 2f;
+    private float timer = 0f;
 
     private void Update()
     {
-        if (Time.time >= nextFireTime)
+        timer += Time.deltaTime;
+
+        if (timer > spawnRate)
         {
             ShootArrow();
-            nextFireTime = Time.time + timeBetweenShots;
+            timer = 0f;
         }
-    }
 
+    }
     void ShootArrow()
     {
-        if (!shootingLeft) 
-        {
-            // Instantiate a new arrow projectile at the fire point.
-            GameObject newarrow = Instantiate(arrowPrefab, arrowPosRight.position, arrowPosRight.rotation);
+        GameObject arrow = Instantiate(arrowPrefab, spawnPosition.position, Quaternion.identity);
 
-            // Get the rigidbody of the arrow 
-            Rigidbody rb = newarrow.GetComponent<Rigidbody>();
-
-            if (rb != null) 
-            {
-                
-                // Set the velocity of the arrow to make it move forward
-                rb.velocity = new Vector3(arrowSpeed, 0, 0);
-            }
-        }
-        else
-        {
-            // Instantiate a new arrow projectile at the fire point.
-            GameObject newarrow = Instantiate(arrowPrefab, arrowPosLeft.position,arrowPosLeft.rotation);
-            newarrow.transform.Rotate(0f, 180f, 0f);
-
-            // Get the rigidbody of the arrow 
-            Rigidbody rb = newarrow.GetComponent<Rigidbody>();
-
-            if (rb != null)
-            {
-
-                // Set the velocity of the arrow to make it move forward
-                rb.velocity = new Vector3(-arrowSpeed, 0, 0);
-            }
-        }
+        Vector3 direction = (targetLocation.position - spawnPosition.position).normalized;
         
+        arrow.transform.rotation = Quaternion.LookRotation(direction);
+        
+        Arrow arrowMovement = arrow.GetComponent<Arrow>();
+
+        if (arrowMovement != null)
+        {
+            arrowMovement.SetTrajectory(targetLocation.position);
+        }
     }
 }
 
