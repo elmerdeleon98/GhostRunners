@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     //panels ui
     public GameObject damagePanel;
+    public GameObject winPanel;
 
     private void Start()
     {
@@ -55,8 +56,8 @@ public class Player : MonoBehaviour
         //recognises a player picked up the magical orb and switches to winScene
         if (other.CompareTag("MagicOrb"))
         {
-            Debug.Log("Player picked up the Magic Orb!");
-            SceneSwitch.instance.switchScene(6);
+            winPanel.SetActive(true);
+            Time.timeScale = 0;
         }
 
         //recognises a player touched the exit 1 and switches to next level
