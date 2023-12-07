@@ -87,7 +87,6 @@ public class Player : MonoBehaviour
             else
             {
                 Debug.Log("Player was hit by an enemy!");
-                EnemyFollow.hitPlayer = true;
                 playerHealth -= 3;
             }
         }

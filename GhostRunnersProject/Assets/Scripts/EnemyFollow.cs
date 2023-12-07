@@ -10,13 +10,12 @@ public class EnemyFollow : MonoBehaviour
     public float detectionRadius = 5.0f; // Radius to detect the player
     public Vector3 desiredRotation = new Vector3(0f, 0f, 0f); // Desired rotation in degrees
     public int EnemyType = 0;
-    public static bool hitPlayer = false;   
 
     private Rigidbody rb;
 
     private void Start()
     {
-        hitPlayer = false;
+        
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,12 +24,6 @@ public class EnemyFollow : MonoBehaviour
 
         Move();
 
-    }
-
-    IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(2);
-        hitPlayer = false;
     }
 
     public void Move()
@@ -42,49 +35,39 @@ public class EnemyFollow : MonoBehaviour
         float distanceToPlayer = directionToPlayer.magnitude;
 
 
-        if (!hitPlayer)
+
+        // Check if the player is within the detection radius
+        if (distanceToPlayer <= detectionRadius)
         {
-            // Check if the player is within the detection radius
-            if (distanceToPlayer <= detectionRadius)
+            // Normalize the direction vector to get a unit vector
+            directionToPlayer.Normalize();
+
+            // Calculate velocity based on direction and speed
+            Vector3 velocity = directionToPlayer * moveSpeed;
+
+            switch (EnemyType)
             {
-                // Normalize the direction vector to get a unit vector
-                directionToPlayer.Normalize();
+                case 1:
 
-                // Calculate velocity based on direction and speed
-                Vector3 velocity = directionToPlayer * moveSpeed;
+                    // Set the velocity for the Rigidbody to move the enemy
+                    rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
+                    break;
+                case 2:
 
-                switch (EnemyType)
-                {
-                    case 1:
-
-                        // Set the velocity for the Rigidbody to move the enemy
-                        rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
-                        break;
-                    case 2:
-
-                        // Set the velocity for the Rigidbody to move the enemy and allow velocity on the y
-                        rb.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
-                        break;
-                    default:
-                        break;
-                }
-                // Make the enemy always face the player
-                transform.LookAt(player);
+                    // Set the velocity for the Rigidbody to move the enemy and allow velocity on the y
+                    rb.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
+                    break;
+                default:
+                    break;
             }
-            else
-            {
-                // Stop moving if the player is not within the detection radius
-                rb.velocity = Vector3.zero;
-            }
+            // Make the enemy always face the player
+            transform.LookAt(player);
         }
         else
         {
+            // Stop moving if the player is not within the detection radius
             rb.velocity = Vector3.zero;
-            float originalRadius = detectionRadius;
-            float tempRadius = 0.1f;
-            detectionRadius = tempRadius;
-            StartCoroutine(Delay());
-            detectionRadius = originalRadius;
         }
+
     }
 }
