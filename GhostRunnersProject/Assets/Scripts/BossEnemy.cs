@@ -5,15 +5,17 @@ using UnityEngine;
 public class BossEnemy : MonoBehaviour
 {
     public GameObject door;
-    static public int health;
+    static public int health = 9;
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
     public float shootingInterval = 2f;
     public float projectileSpeed = 7f;
+    public HealthBar healthBar;
 
     void Start()
     {
         health = 9;
+        healthBar.SetMaxHealth(health);
         InvokeRepeating("ShootProjectile", 0f, shootingInterval);
     }
 
