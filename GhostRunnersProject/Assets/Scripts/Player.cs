@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
     public static Vector3 checkPointPos;
     public static bool isDead = false;
 
+    //panels ui
+    public GameObject damagePanel;
+
     private void Start()
     {
         checkPointPos = DefaultSpawnPos.transform.position;
@@ -155,13 +158,20 @@ public class Player : MonoBehaviour
             playerHealth = 20;
         }
 
-        if(other.CompareTag("Light"))
+        if (other.CompareTag("Light"))
         {
-            //coroutine that damages the player every x seconds whil inside the light
-            InvokeRepeating("DamagePerSecond", 2f, 4f);
+            // Coroutine that damages the player every x seconds while inside the light
+            StartCoroutine(DamagePerSecondCoroutine());
         }
 
-        if(other.CompareTag("CheckPoint1"))
+        if (other.CompareTag("Light"))
+        {
+            // Stop the coroutine when exiting the light
+            StopCoroutine(DamagePerSecondCoroutine());
+            damagePanel.SetActive(false); // Ensure the panel is deactivated when leaving the light
+        }
+
+        if (other.CompareTag("CheckPoint1"))
         {
             checkPointPos = transform.position;
 
@@ -178,10 +188,24 @@ public class Player : MonoBehaviour
             playerHealth -= 5;
         }
     }
-    
-   
 
-    public void Teleport(Vector3 newPosition)
+    IEnumerator DamagePerSecondCoroutine()
+    {
+        while (true)
+        {
+            // Toggle the state of the damage panel
+            damagePanel.SetActive(!damagePanel.activeSelf);
+
+            // Your damage logic
+            playerHealth--;
+
+            // Wait for 4 seconds before repeating
+            yield return new WaitForSeconds(4f);
+        }
+    }
+
+
+public void Teleport(Vector3 newPosition)
     {
         transform.position = newPosition;
     }
@@ -189,5 +213,6 @@ public class Player : MonoBehaviour
     public void DamagePerSecond()
     {
         playerHealth--;
+
     }
 }
