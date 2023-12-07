@@ -11527,17 +11527,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 56545593}
   m_VersionIndex: 20887
   m_IsSelectable: 1
-  m_SelectedFaces: 37000000
-  m_SelectedEdges:
-  - a: 220
-    b: 221
-  - a: 222
-    b: 220
-  - a: 221
-    b: 223
-  - a: 223
-    b: 222
-  m_SelectedVertices: dc000000dd000000de000000df000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &102706935
 Transform:
   m_ObjectHideFlags: 0
@@ -24727,8 +24719,8 @@ Transform:
   m_GameObject: {fileID: 700961535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.9, y: -34.06, z: 116.4}
-  m_LocalScale: {x: 6.276975, y: 6.053014, z: 6.053014}
+  m_LocalPosition: {x: -21.9, y: -36.08, z: 116.4}
+  m_LocalScale: {x: 2.9510438, y: 2.8457508, z: 2.8457508}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2056321653}
@@ -27806,11 +27798,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106003555061347046, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000041909516
+      value: -0.0000000041909516
       objectReference: {fileID: 0}
     - target: {fileID: 4106003555061347046, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -5.820766e-10
+      value: 4.656613e-10
       objectReference: {fileID: 0}
     - target: {fileID: 5161354558367328167, guid: 77c5854da6341d14788facb48f4a1eba, type: 3}
       propertyPath: damagePanel
@@ -64729,7 +64721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994239890}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12399619, y: 0.000000015398701, z: -0.00000000192423, w: 0.9922827}
+  m_LocalRotation: {x: 0.12399619, y: -0.000000015402888, z: 0.0000000019247535, w: 0.9922827}
   m_LocalPosition: {x: 116.48, y: 1.6797148, z: -105.92962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
