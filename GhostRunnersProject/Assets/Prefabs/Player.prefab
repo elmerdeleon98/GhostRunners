@@ -687,7 +687,7 @@ MonoBehaviour:
     m_Radius: 9
   - m_Height: 2
     m_Radius: 7
-  - m_Height: 0
+  - m_Height: -2
     m_Radius: 5
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
@@ -1141,6 +1141,8 @@ MonoBehaviour:
   skill: {fileID: 6942274495437087841}
   sceneScript: {fileID: 0}
   DefaultSpawnPos: {fileID: 0}
+  damagePanel: {fileID: 0}
+  winPanel: {fileID: 0}
 --- !u!114 &6942274495437087841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,6 +1158,7 @@ MonoBehaviour:
   myObject: {fileID: 7707025328584852623}
   isTranslucent: 0
   isBlocked: 0
+  ghostTimer: {fileID: 0}
 --- !u!136 &8119197307732201858
 CapsuleCollider:
   m_ObjectHideFlags: 0
